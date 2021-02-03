@@ -1,0 +1,88 @@
+//_______________________Colors And other variables_________________________________
+$backgroundColor: #fff;
+$fontColor:gray;
+$highlightColor:orange;
+$transparentColor:transparent;
+$redButton:red;
+$searchButton:blue;
+$outlineColor: #C0C0C0;
+$hoverColor:#7d7f7c;
+//
+$blueColor:#4285F4;
+$redColor:#DB4437;
+$yellowColor:#F4B400;
+$greenColor:#0F9D58;
+$fontStack:"Roboto", Arial, sans_serif ;
+//___________________________________________________________________________________
+%flex{
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexColumn{
+    @extend %flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+@mixin flexCenter {
+    @extend %flex;
+    justify-content: center;
+}
+
+@mixin mq9($screenSize){
+    @media only screen and (min-width: $screenSize){
+        @content;
+    }
+        
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background-color: white;
+    color: $fontColor;
+    width: 100vw;
+    min-width: 100vw;
+    font-size: 20px;
+    font-family: $fontStack;
+}
+
+main{
+    @include flexColumn();
+    min-height: calc(100vh - 60px);
+}
+
+
+.offScreen{
+    position: absolute;
+    left: -10000px;
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+    @include flexColumn();
+
+    p{
+        font-size: 0.75rem;
+    }
+    
+    a{
+        color: $highlightColor;
+    }
+
+    @include mq9(768px){
+        font-size: 1rem;
+    }
+    padding-top: 20px;
+
+}
+
+img{
+    display: block;
+}

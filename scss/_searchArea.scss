@@ -1,0 +1,103 @@
+.searchArea{
+    @include flexColumn();
+
+    width: 100%;
+    .title{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 1.5rem;
+        letter-spacing: -10;
+        font-weight: 600;
+    }
+    @include mq9(768px){
+        .title{
+            padding-bottom: 50px; //TODO: May need to adjust this.
+            font-size: 2rem
+        }
+    }
+}
+
+.searchBarBack{
+    // The white area around the search
+    @include flexCenter; // Dont use flex column , it comes out weird
+    border-radius: 500px;
+    //TODO:Might need to check on this to adjust size. More testing must go on first
+
+    background-color: $backgroundColor;
+    border: 1px solid $outlineColor;
+    box-shadow: 3px 10px 10px $outlineColor;
+    
+    
+    .searchButton{
+        border: none;
+        background-color:$transparentColor;
+        
+        i{
+            color: $searchButton;
+        }
+    }
+    .searchBar{
+        height: 2rem;
+        
+        width: 60%;
+        max-width: 600px;
+        
+        border-radius: 500px;
+        border: none;
+        outline: none;
+    }
+
+    @include mq9(768px){
+        width: 400px;
+    
+        
+    }
+}
+.searchBarBack:hover, 
+.searchBarBack:active{
+    box-shadow: 3px 10px 10px $hoverColor;
+}
+
+.button{
+    cursor: pointer;
+    outline: none;
+    min-width: 45px;
+    min-height: 45px;
+}
+
+.clear{
+    display: none;
+}
+.clearButton{
+    border-right: solid 1px $outlineColor;
+    position: relative;
+    i{
+        color: red;
+        position: absolute;
+        left: 35%;
+        top: 30%;
+    }
+   
+}
+
+
+.twoButton{
+    padding-top: 20px;
+
+    .button{
+        cursor: pointer;
+        outline: none;
+        min-width: 5rem;
+        min-height: 30px;
+        background-color: $transparentColor;
+        outline: none;
+        border: none;
+    }
+
+    button:hover{
+        border: 1px solid $outlineColor;
+        
+    }
+
+}
+

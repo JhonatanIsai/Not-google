@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./scss/style.css" />
+
+    <script src="./javascript/main.js" type="module"></script> <!--Here we need to change this-->
+    <title>Not-Google</title>
+</head>
+
+<body>
+    <main>
+        <h1 class="offScreen" > A search engine powered by Duck Duck Go</h1>
+        <!--Dont forget that the title is inside the tile area -->
+
+        <section class="searchArea">
+
+            <h2 class="offScreen"> Enter the search term</h2>
+
+            <div class="title" aria-live="off">
+                <section>
+                    <span class="blue">N</span>
+                    <span class="red">o</span>
+                    <span class="yellow">t</span>
+                    <span class="blue">-</span>
+                    <span class="green">G</span>
+                    <span class="red">o</span>
+                    <span class="blue">o</span>
+                    <span class="red">g</span>
+                    <span class="yellow">l</span>
+                    <span class="green">e</span>
+                </section>
+                
+
+            </div>
+
+            <form class="searchBarBack" id="searchBarBack">
+
+                <label class="offScreen" for="searchBar" > Search Bar. Please enter a term or word to search.</label>
+             
+                <input type="text" id="searchBar" class="searchBar" role="search" >
+                
+                <div id="clear" class="clearButton button clear" role="button" tabindex="0" aria-label="clear button">
+                    <i class="fas fa-times"></i> <!---The X to cancel the seaerch-->
+                </div>
+
+                <button id="searchButton" class="searchButton button" type="submit" aria-label="submitButton">
+                    <i class="fas fa-search"></i> <!-- The search Button-->
+                </button>
+
+            </form>
+            <div id="twoButton" class="twoButton">
+                <button id="dankMeme" class="dankMeme button"> Dank Meme </button>
+                <button id="somethingRandom" class="somethingRandom button">Something random</button>
+            </div>
+        
+        </section>
+        <!--Look into fixng this  to add a meme-->
+        <section id="memeArea" class="memeArea">
+            <div>
+                <img id="elMeme" class="elMeme" >
+            </div>
+        </section>
+        <!--For Search results-->
+        <section id="searchBlock" class="searchBlock">
+            <div id="stats" class="stats">
+            
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p><span aria-hidden="true">&lt;&lt;</span> Powered by <a href="https://www.duckduckgo.com" target="_blank">DuckDuckGo</a> <span aria-hidden="true">&gt;&gt;</span></p>
+    </footer>
+    
+</body>
+</html>
